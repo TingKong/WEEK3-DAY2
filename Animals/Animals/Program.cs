@@ -10,6 +10,7 @@ namespace Animals
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
