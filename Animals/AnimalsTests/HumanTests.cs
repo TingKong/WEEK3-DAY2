@@ -18,8 +18,6 @@ namespace Animals.Tests
         [TestMethod()]
         public void HumanTest()
         {
-
-          
             Assert.AreEqual(2, Ting.NumLegs);
             Assert.AreEqual(false, Ting.HasFur);
             Assert.AreEqual("Homosapien", Ting.Species);
@@ -32,19 +30,15 @@ namespace Animals.Tests
         public void GetMarriedTest()
         {
             Assert.AreEqual('S', Ting.MaritalStatus);
-
             Ting.GetMarried();
             Assert.AreEqual('M', Ting.MaritalStatus);
-
-
-        }
+    }
 
         [TestMethod()]
         public void GetMarriedTest1()
         {
             Assert.AreEqual(null, Ting.FirstName);
             Assert.AreEqual(null, Ting.LastName);
-
             Ting.FirstName = "Sau";
             Ting.LastName = "Married";
             Assert.AreEqual("Sau", Ting.FirstName);
@@ -58,7 +52,6 @@ namespace Animals.Tests
             Assert.AreEqual('M', Ting.MaritalStatus);
             Ting.GetSingle();
             Assert.AreEqual('S', Ting.MaritalStatus);
-
         }
 
         [TestMethod()]
@@ -70,9 +63,6 @@ namespace Animals.Tests
             Ting.LastName = "Kong";
             Assert.AreEqual("Sau", Ting.FirstName);
             Assert.AreEqual("Kong", Ting.LastName);
-
-
-
         }
     }
 }

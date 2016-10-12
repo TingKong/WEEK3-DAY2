@@ -16,7 +16,14 @@ namespace Animals.Tests
         [TestMethod()]
         public void MammalTest()
         {
-            Assert.AreEqual(true, Toast.GivesLiveBirth);
+            Toast.NumLegs = 4;
+            Toast.HasOffspring = true;
+            Toast.HasFur = false;
+            Toast.HasTail = true;
+            Assert.AreEqual(4, Toast.NumLegs);
+            Assert.AreEqual(true, Toast.HasOffspring);
+            Assert.AreEqual(false, Toast.HasFur);
+            Assert.AreEqual(true, Toast.HasTail); Assert.AreEqual(true, Toast.GivesLiveBirth);
             Assert.AreEqual(0, Toast.NumChildren);
         }
 
@@ -26,7 +33,6 @@ namespace Animals.Tests
             Toast.GiveBirth();
             Assert.IsTrue(Toast.HasOffspring);
             Assert.AreEqual(1, Toast.NumChildren);
-
         }
 
         [TestMethod()]
@@ -35,8 +41,6 @@ namespace Animals.Tests
             Toast.GiveBirth(2);
             Assert.IsTrue(Toast.HasOffspring);
             Assert.AreEqual(2, Toast.NumChildren);
-          
-
         }
     }
 }

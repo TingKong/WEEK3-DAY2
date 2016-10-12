@@ -17,14 +17,11 @@ namespace Animals.Tests
         [TestMethod()]
         public void CanineTest()
         {
-            //NumLegs = 4;
-            //HasFur = true;
-            //Species = "Canis";
-            //HasTail = true;
-            //HasOpposableThumb = false;
-
-            
-
+            Assert.AreEqual(4, Moo.NumLegs);
+            Assert.IsTrue(  Moo.HasFur);
+            Assert.AreEqual("Canis", Moo.Species);
+            Assert.IsTrue( Moo.HasTail);
+            Assert.IsFalse(Moo.HasOpposableThumb);
         }
 
        
